@@ -1,10 +1,9 @@
 export const getSinglePokemon = (pokemonName) => dispatch => {
-    return new Promise((resolve, reject) => {
-        const xhr = new XMLHttpRequest();
-        xhr.onload = () => resolve (JSON.parse(xhr.responseText))
-        xhr.onerror = () => reject(xhr.statusText)
-        xhr.open('GET', `https://pokeapi.co/api/v2/pokemon/${pokemonName}`)
-        xhr.send()
+    return fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`)
+    .then((response) => {
+        return response.json();
     })
-    .then(pokemonData => dispatch({type: 'SET_SINGLE_POKEMON', payload: pokemonData}), console.log)
+    .then((pokemonData) => 
+        dispatch({type: 'SET_SINGLE_POKEMON', payload: pokemonData})
+    ).catch(console.log);
 }; 
