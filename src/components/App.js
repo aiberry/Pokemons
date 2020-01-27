@@ -3,6 +3,7 @@ import  '../styles/App.sass';
 import PokemonItem from './PockemonItem';
 import { connect } from 'react-redux';
 import { getPokemons } from '../actions/getPokemons';
+import PropTypes from 'prop-types';
 
 let App = ({pokemonList, onGetPokemons}) => {
     let onSearchHandler = (event) => {
@@ -40,3 +41,8 @@ export default connect (
         }
     })
 )(App);
+
+App.propTypes = {
+    pokemonList: PropTypes.array,
+    onGetPokemons: PropTypes.func
+};

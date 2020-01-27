@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 
 let Types = ({typesData}) => (
    
@@ -13,3 +14,7 @@ let Types = ({typesData}) => (
 )
 
 export default Types
+
+Types.propTypes = {
+    typesData: PropTypes.array
+};

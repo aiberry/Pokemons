@@ -1,5 +1,6 @@
 import React from 'react';
-import { NavLink, useRouteMatch } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 const PokemonLink = ({ filterName }) => (
     <NavLink
@@ -16,3 +17,7 @@ const PokemonLink = ({ filterName }) => (
 )
 
 export default PokemonLink
+
+PokemonLink.propTypes = {
+    filterName: PropTypes.string
+};

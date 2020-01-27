@@ -7,6 +7,7 @@ import Abilities from './Abilities'
 import Types from './Types'
 import Moves from './Moves'
 import Spin from './Spin'
+import PropTypes from 'prop-types';
 
 let PokemonSingle = ({allSingles, onGetSinglePokemon}) => {
     let location = useLocation();
@@ -48,3 +49,8 @@ export default connect (
         }
     })
 )(PokemonSingle);
+
+PokemonSingle.propTypes = {
+    allSingles: PropTypes.array,
+    onGetSinglePokemon: PropTypes.func
+};

@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 
 let Sprites = ({spritesData}) => (
     <div className='spriteWrapper'>
@@ -15,3 +16,7 @@ let Sprites = ({spritesData}) => (
 )
 
 export default Sprites
+
+Sprites.propTypes = {
+    spritesData: PropTypes.object
+};

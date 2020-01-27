@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 
 let Moves = ({movesData}) => (
     <ul className='singlePokemonUL'>
@@ -11,3 +12,7 @@ let Moves = ({movesData}) => (
 )
 
 export default Moves
+
+Moves.propTypes = {
+    movesData: PropTypes.array
+};

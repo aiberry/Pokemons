@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 
 let Abilities = ({abilitiesData}) => (
    
@@ -13,3 +14,7 @@ let Abilities = ({abilitiesData}) => (
 )
 
 export default Abilities
+
+Abilities.propTypes = {
+    abilitiesData: PropTypes.array
+};
