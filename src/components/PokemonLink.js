@@ -4,8 +4,7 @@ import PropTypes from 'prop-types';
 
 const PokemonLink = ({ filterName }) => (
     <NavLink
-    
-        exact 
+        exact
         to={filterName}
         activeStyle={{
             textDecoration: 'none',
@@ -14,9 +13,9 @@ const PokemonLink = ({ filterName }) => (
     >
         {filterName}
     </NavLink>
-)
+);
 
-export default PokemonLink
+export default PokemonLink;
 
 PokemonLink.propTypes = {
     filterName: PropTypes.string

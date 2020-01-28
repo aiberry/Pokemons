@@ -1,13 +1,13 @@
-import React from "react"
-import FilterLink from './PokemonLink'
+import React from 'react';
+import FilterLink from './PokemonLink';
 import PropTypes from 'prop-types';
 
-export default function Pokemon_item ({name, clickAction}) {
+export default function Pokemon_item({ name, clickAction }) {
     return (
         <li onClick={clickAction}>
-            <FilterLink filterName={name}/>
+            <FilterLink filterName={name} />
         </li>
-    )
+    );
 }
 
 Pokemon_item.propTypes = {
