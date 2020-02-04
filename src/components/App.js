@@ -1,6 +1,6 @@
 import React from 'react';
 import '../styles/App.sass';
-import PokemonItem from './PockemonItem';
+import PokemonItem from './PokemonItem';
 import { connect } from 'react-redux';
 import { getPokemons } from '../actions/getPokemons';
 import PropTypes from 'prop-types';
