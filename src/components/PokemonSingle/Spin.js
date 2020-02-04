@@ -6,9 +6,8 @@ let Spin = () => (
     <div  className="onLoadingSpin">
         <ClockLoader 
             size={200}
-            color={"#36d7b7"}
+            color={"#27aedb"}
         />
     </div>
 );
-
 export default Spin;

@@ -26,13 +26,11 @@ let PokemonSingle = ({ allSingles, onGetSinglePokemon }) => {
                 <h1>{currentPokemonData.name.toUpperCase()}</h1>
                 <h2>Sprites</h2>
                 <Sprites spritesData={currentPokemonData.sprites} />
-                <h2>Abilities</h2>
-                <Abilities abilitiesData={currentPokemonData.abilities} />
-                <h2>Types</h2>
-                <Types typesData={currentPokemonData.types} />
-                <h2>Moves</h2>
-                <p>Moves Total: {currentPokemonData.moves.length}</p>
-                <Moves movesData={currentPokemonData.moves} />
+                <div className="gridWrapper">
+                    <Abilities abilitiesData={currentPokemonData.abilities} />
+                    <Types typesData={currentPokemonData.types} />
+                    <Moves movesData={currentPokemonData.moves} />
+                </div>
             </div>
         );
     } else {

@@ -1,19 +1,11 @@
-.singlePokemonListContent
-    text-transform: uppercase
-    padding: 5px
-    color: #305620
-       
+.singlePokemonWrapper 
+    margin-left: 50px;
+
 h2
     text-align: left;
     font-size: 23px;
     color: #a74141;
     font-family: sans-serif;
-
-p
-    font-family: cursive
-
-.singlePokemonWrapper 
-    margin-left: 50px;
 
 .spriteWrapper
     display: flex
@@ -21,6 +13,14 @@ p
     flex-wrap: wrap
     justify-content: center
     align-items: flex-start
+        
+img
+    width: 180px
+
+.singlePokemonListContent
+    text-transform: uppercase
+    padding: 5px
+    color: #305620
 
 .singlePokemonListContent
     div
@@ -29,6 +29,22 @@ p
         flex-wrap: wrap
         justify-content: flex-start
         align-items: baseline
-        
-img
-    width: 180px
+    
+p
+    font-family: cursive
+
+.gridWrapper
+    display: grid
+    grid-template: auto / [abilities] 1fr [types] 1fr [moves] 1fr
+
+.abilitiesGridItem
+    grid-column: abilities / types
+    grid-row: 1
+
+.typesGridItem
+    grid-column: moves
+    grid-row: 1
+    
+.movesGridItem
+    grid-column: types
+    grid-row: 1
