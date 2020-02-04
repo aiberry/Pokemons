@@ -1,7 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { getSinglePokemon } from '../../actions/getSinglePokemon';
 import { useLocation } from 'react-router-dom';
+import { getSinglePokemon } from '../../actions/getSinglePokemon';
+import '../../styles/PokemonSingle.sass';
 import Sprites from './Sprites';
 import Abilities from './Abilities';
 import Types from './Types';
@@ -22,14 +23,14 @@ let PokemonSingle = ({ allSingles, onGetSinglePokemon }) => {
     if (currentPokemonData !== undefined) {
         return (
             <div className="singlePokemonWrapper">
-                <h1>Pockemon {currentPokemonData.name.toUpperCase()}</h1>
-                <h2 className="secondPokemonHeader">Sprites</h2>
+                <h1>{currentPokemonData.name.toUpperCase()}</h1>
+                <h2>Sprites</h2>
                 <Sprites spritesData={currentPokemonData.sprites} />
-                <h2 className="secondPokemonHeader">Abilities</h2>
+                <h2>Abilities</h2>
                 <Abilities abilitiesData={currentPokemonData.abilities} />
-                <h2 className="secondPokemonHeader">Types</h2>
+                <h2>Types</h2>
                 <Types typesData={currentPokemonData.types} />
-                <h2 className="secondPokemonHeader">Moves</h2>
+                <h2>Moves</h2>
                 <p>Moves Total: {currentPokemonData.moves.length}</p>
                 <Moves movesData={currentPokemonData.moves} />
             </div>

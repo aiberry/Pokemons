@@ -2,11 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 let Moves = ({ movesData }) => (
-    <ul className="singlePokemonUL">
+    <ul className="singlePokemonListContent">
         {movesData.map((moveItem, index) => (
-            <div key={index}>
-                <li>{moveItem.move.name}</li>
-            </div>
+            
+                <li key={index}>{moveItem.move.name}</li>
+           
         ))}
     </ul>
 );

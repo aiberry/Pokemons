@@ -17,7 +17,7 @@ let App = ({ pokemonList, onGetPokemons }) => {
     return (
         <div>
             <h1>Pockemon Search</h1>
-            <h2 className="underSearchText">Find pockemon by name</h2>
+            <p className="underSearchText">Find pockemon by name</p>
             <input
                 placeholder="Empty query for the whole list"
                 className="searchInput"

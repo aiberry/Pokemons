@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 let Abilities = ({ abilitiesData }) => (
-    <ul className="singlePokemonUL">
+    <ul className="singlePokemonListContent">
         {abilitiesData.map((abilityItem, index) => (
             <div key={index}>
                 <li>{abilityItem.ability.name} - </li>

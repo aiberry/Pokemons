@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 let Types = ({ typesData }) => (
-    <ul className="singlePokemonUL">
+    <ul className="singlePokemonListContent">
         {typesData.map((typeItem, index) => (
             <div key={index}>
                 <li>{typeItem.type.name}</li>
