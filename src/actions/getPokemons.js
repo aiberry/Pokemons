@@ -6,5 +6,5 @@ export const getPokemons = () => (dispatch) => {
         .then((myJson) =>
             dispatch({ type: 'SET_POKEMONS_TO_LIST', payload: myJson.results })
         )
-        .catch(console.log);
+        .catch(console.log);// eslint-disable-line
 };

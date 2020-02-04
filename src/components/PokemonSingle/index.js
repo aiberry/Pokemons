@@ -14,7 +14,6 @@ import PropTypes from 'prop-types';
 const PokemonSingle = ({ allSingles, onGetSinglePokemon }) => {
     const location = useLocation();
     const pokemonName = location.pathname.substr(9);
-    console.log(pokemonName)
     if (allSingles.findIndex((pokemon) => pokemon.name === pokemonName) < 0) {
         onGetSinglePokemon(pokemonName);
     }

@@ -4,7 +4,7 @@ import PokemonItem from './PokemonItem';
 import { connect } from 'react-redux';
 import { getPokemons } from '../actions/getPokemons';
 import PropTypes from 'prop-types';
-import { useHistory } from "react-router-dom";
+import { useHistory } from 'react-router-dom';
 
 const App = ({ pokemonList, onGetPokemons }) => {
     const history = useHistory();
@@ -13,7 +13,7 @@ const App = ({ pokemonList, onGetPokemons }) => {
             if (event.target.value === '') {
                 onGetPokemons();
             } else {
-               history.push("/pokemon/" + event.target.value.toLowerCase());
+                history.push('/pokemon/' + event.target.value.toLowerCase());
             }
         }
     };

@@ -1,4 +1,4 @@
-import { useHistory } from "react-router-dom";
+import { useHistory } from 'react-router-dom';
 
 export const getSinglePokemon = (pokemonName) => (dispatch) => {
     const history = useHistory();
@@ -9,8 +9,8 @@ export const getSinglePokemon = (pokemonName) => (dispatch) => {
         .then((pokemonData) =>
             dispatch({ type: 'SET_SINGLE_POKEMON', payload: pokemonData })
         )
-        .catch(error => {
-            history.push("/pokemon/404");
-            console.log(error);
+        .catch((error) => {
+            history.push('/pokemon/404');
+            console.log(error);  // eslint-disable-line
         });
 };

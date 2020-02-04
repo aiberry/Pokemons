@@ -11,7 +11,7 @@ const Types = ({ typesData }) => (
                     <p> - Slot: {typeItem.slot}</p>
                 </div>
             ))}
-        </ul> 
+        </ul>
     </div>
 );
 
