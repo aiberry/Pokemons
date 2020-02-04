@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { useLocation } from 'react-router-dom';
 import { getSinglePokemon } from '../../actions/getSinglePokemon';
 import '../../styles/PokemonSingle.sass';
+
 import Sprites from './Sprites';
 import Abilities from './Abilities';
 import Types from './Types';
@@ -10,13 +11,14 @@ import Moves from './Moves';
 import Spin from './Spin';
 import PropTypes from 'prop-types';
 
-let PokemonSingle = ({ allSingles, onGetSinglePokemon }) => {
-    let location = useLocation();
-    let pokemonName = location.pathname.substr(1);
+const PokemonSingle = ({ allSingles, onGetSinglePokemon }) => {
+    const location = useLocation();
+    const pokemonName = location.pathname.substr(9);
+    console.log(pokemonName)
     if (allSingles.findIndex((pokemon) => pokemon.name === pokemonName) < 0) {
         onGetSinglePokemon(pokemonName);
     }
-    let currentPokemonData = allSingles.find(
+    const currentPokemonData = allSingles.find(
         (pokemon) => pokemon.name === pokemonName
     );
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-let Sprites = ({ spritesData }) => (
+const Sprites = ({ spritesData }) => (
     <div className="spriteWrapper">
         <div className="sprite">
             <p>Default</p>

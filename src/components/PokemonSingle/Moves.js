@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-let Moves = ({ movesData }) => (
+const Moves = ({ movesData }) => (
     <div className="movesGridItem">
         <h2>Moves</h2>
         <p>Moves Total: {movesData.length}</p>

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-let Abilities = ({ abilitiesData }) => (
+const Abilities = ({ abilitiesData }) => (
     <div className="abilitiesGridItem">
         <h2>Abilities</h2>
         <ul className="singlePokemonListContent">

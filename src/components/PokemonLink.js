@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 const PokemonLink = ({ filterName }) => (
     <NavLink
         exact
-        to={filterName}
+        to={"pokemon/" + filterName}
         activeStyle={{
             textDecoration: 'none',
             color: 'black'

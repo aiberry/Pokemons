@@ -4,12 +4,16 @@ import PokemonItem from './PockemonItem';
 import { connect } from 'react-redux';
 import { getPokemons } from '../actions/getPokemons';
 import PropTypes from 'prop-types';
+import { useHistory } from "react-router-dom";
 
-let App = ({ pokemonList, onGetPokemons }) => {
-    let onSearchHandler = (event) => {
+const App = ({ pokemonList, onGetPokemons }) => {
+    const history = useHistory();
+    const onSearchHandler = (event) => {
         if (event.keyCode === 13) {
             if (event.target.value === '') {
                 onGetPokemons();
+            } else {
+               history.push("/pokemon/" + event.target.value.toLowerCase());
             }
         }
     };

@@ -1,4 +1,4 @@
-let single = (state = [], action) => {
+const single = (state = [], action) => {
     if (action.type === 'SET_SINGLE_POKEMON') {
         return [...state, action.payload];
     }

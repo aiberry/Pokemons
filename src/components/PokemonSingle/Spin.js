@@ -2,7 +2,7 @@ import React from 'react';
 import ClockLoader from "react-spinners/ClockLoader";
 import '../../styles/Spin.sass';
 
-let Spin = () => (
+const Spin = () => (
     <div  className="onLoadingSpin">
         <ClockLoader 
             size={200}

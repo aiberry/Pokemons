@@ -10,9 +10,8 @@ const Root = ({ store }) => (
         <Router>
             <Switch>
                 <Route path="/" exact component={App} />
-                <Route path="/:pokemonName" component={PokemonSingle} />
-                <Route path="/404" component={PageNotFound} />
-                <Redirect to="/404" />
+                <Route path="/pokemon/404" component={PageNotFound} />
+                <Route path="/pokemon/:pokemonName" component={PokemonSingle} />
             </Switch>
         </Router>
     </Provider>
