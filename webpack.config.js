@@ -16,7 +16,7 @@ const config = {
     module: {
         rules: [
             {
-                test: /\.(js|jsx)$/,
+                test: /\.js$/,
                 loader: ['babel-loader'],
                 resolve: {
                     extensions: ['.tsx', '.ts', '.js']
