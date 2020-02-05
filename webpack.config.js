@@ -15,10 +15,6 @@ const config = {
 
     module: {
         rules: [
-            //   {
-            //     test: /\.html$/,
-            //     loader: 'html-loader'
-            //   },
             {
                 test: /\.(js|jsx)$/,
                 loader: ['babel-loader'],
@@ -29,15 +25,9 @@ const config = {
             {
                 test: /\.css|\.s[ac]ss$/i,
                 use: ['style-loader', 'css-loader', 'sass-loader']
-                // options: {
-                //     modules: true,
-                // }
             }
         ]
     },
-
-    //   devtool: 'cheap-eval-source-map',
-
     plugins: [
         new HtmlWebpackPlugin({
             title: 'Pockemon App',

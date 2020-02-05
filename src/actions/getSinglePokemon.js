@@ -11,6 +11,6 @@ export const getSinglePokemon = (pokemonName) => (dispatch) => {
         )
         .catch((error) => {
             history.push('/pokemon/404');
-            console.log(error);  // eslint-disable-line
+            console.log(error); // eslint-disable-line
         });
 };
