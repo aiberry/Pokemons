@@ -27,7 +27,7 @@ const PokemonSingle = ({ allSingles, onGetSinglePokemon }) => {
                 <h1>{currentPokemonData.name.toUpperCase()}</h1>
                 <h2>Sprites</h2>
                 <Sprites spritesData={currentPokemonData.sprites} />
-                <div className="gridWrapper">
+                <div className="gridContainer">
                     <Abilities abilitiesData={currentPokemonData.abilities} />
                     <Types typesData={currentPokemonData.types} />
                     <Moves movesData={currentPokemonData.moves} />

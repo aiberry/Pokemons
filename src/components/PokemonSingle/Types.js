@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 const Types = ({ typesData }) => (
     <div className="typesGridItem">
         <h2>Types</h2>
-        <ul className="singlePokemonListContent">
+        <ul className="singlePokemonDataContent">
             {typesData.map((typeItem, index) => (
                 <div key={index}>
                     <li>{typeItem.type.name}</li>

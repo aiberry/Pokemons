@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 const Abilities = ({ abilitiesData }) => (
     <div className="abilitiesGridItem">
         <h2>Abilities</h2>
-        <ul className="singlePokemonListContent">
+        <ul className="singlePokemonDataContent">
             {abilitiesData.map((abilityItem, index) => (
                 <div key={index}>
                     <li>{abilityItem.ability.name} - </li>

@@ -27,7 +27,7 @@ const App = ({ pokemonList, onGetPokemons }) => {
                 className="searchInput"
                 onKeyUp={onSearchHandler}
             ></input>
-            <ul className="pokemonList">
+            <ul className="pokemonsToChose">
                 {pokemonList.map((pokemon, index) => (
                     <PokemonItem key={index} name={pokemon.name} />
                 ))}
