@@ -12,7 +12,12 @@ import Moves from './Moves';
 import Spin from './Spin';
 import PropTypes from 'prop-types';
 
-const PokemonSingle = ({ allSingles, onGetSinglePokemon, onSetMovesFilter, movesFilter }) => {
+const PokemonSingle = ({
+    allSingles,
+    onGetSinglePokemon,
+    onSetMovesFilter,
+    movesFilter
+}) => {
     const location = useLocation();
     const pokemonName = location.pathname.substr(9);
     if (allSingles.findIndex((pokemon) => pokemon.name === pokemonName) < 0) {
@@ -31,11 +36,14 @@ const PokemonSingle = ({ allSingles, onGetSinglePokemon, onSetMovesFilter, moves
                 <div className="gridContainer">
                     <Abilities abilitiesData={currentPokemonData.abilities} />
                     <Types typesData={currentPokemonData.types} />
-                    <Moves 
-                        movesData={currentPokemonData.moves.filter(moveItem => moveItem.move.name.includes(movesFilter))} 
+                    <Moves
+                        movesData={currentPokemonData.moves.filter((moveItem) =>
+                            moveItem.move.name.includes(movesFilter)
+                        )}
                         setFilter={onSetMovesFilter}
                         filterValue={movesFilter}
-                        totalMoves={currentPokemonData.moves.length}/>
+                        totalMoves={currentPokemonData.moves.length}
+                    />
                 </div>
             </div>
         );

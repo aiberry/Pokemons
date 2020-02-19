@@ -7,19 +7,19 @@ export default class Moves extends React.Component {
         this.onInputChange = this.onInputChange.bind(this);
     }
 
-    onInputChange (event) {
+    onInputChange(event) {
         event.preventDefault();
         this.props.setFilter(event.target.value.toLowerCase());
     }
 
-    render () {
+    render() {
         return (
-           <div className="movesGridItem">
+            <div className="movesGridItem">
                 <h2>Moves</h2>
                 <p>Moves Total: {this.props.totalMoves}</p>
-                <input 
-                    type="text" 
-                    onChange={this.onInputChange} 
+                <input
+                    type="text"
+                    onChange={this.onInputChange}
                     value={this.props.filterValue}
                 />
                 <ul className="singlePokemonDataContent">
@@ -27,11 +27,14 @@ export default class Moves extends React.Component {
                         <li key={index}>{moveItem.move.name}</li>
                     ))}
                 </ul>
-            </div> 
-        )
+            </div>
+        );
     }
-} 
+}
 
 Moves.propTypes = {
-    movesData: PropTypes.array
+    movesData: PropTypes.array,
+    setFilter: PropTypes.func,
+    totalMoves: PropTypes.string,
+    filterValue: PropTypes.string
 };
