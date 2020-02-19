@@ -84,7 +84,7 @@ export default connect(
 App.propTypes = {
     pokemonList: PropTypes.array,
     onGetPokemons: PropTypes.func,
-    onSetCurrentQuery: PropTypes.string,
+    onSetCurrentQuery: PropTypes.func,
     searchQuery: PropTypes.string,
     nextQuery: PropTypes.string,
     previousQuery: PropTypes.string

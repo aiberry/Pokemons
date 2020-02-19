@@ -4,8 +4,8 @@ import PropTypes from 'prop-types';
 export default class NameSearchForm extends React.Component {
     constructor(props) {
         super(props);
-        this.handleChange = this.handleChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
+        this.onHandleChange = this.onHandleChange.bind(this);
+        this.onHandleSubmit = this.onHandleSubmit.bind(this);
     }
 
     onHandleChange(event) {
