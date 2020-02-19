@@ -1,4 +1,4 @@
-const query = (state = "", action) => {
+const query = (state = "BULBASAUR", action) => {
     if (action.type === 'SET_QUERY') {
         return action.payload;
     }
