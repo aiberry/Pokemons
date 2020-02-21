@@ -1,5 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const autoprefixer = require('autoprefixer');
+const webpack = require('webpack');
 
 const config = {
     context: path.resolve('./'),
@@ -17,14 +19,14 @@ const config = {
         rules: [
             {
                 test: /\.js$/,
-                loader: ['babel-loader'],
+                loader: ['babel-loader', 'astroturf/loader'],
                 resolve: {
                     extensions: ['.tsx', '.ts', '.js']
                 }
             },
             {
                 test: /\.css|\.s[ac]ss$/i,
-                use: ['style-loader', 'css-loader', 'sass-loader']
+                use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader']
             }
         ]
     },
@@ -34,6 +36,13 @@ const config = {
             template: './src/index.html',
             inject: 'body',
             filename: 'index.html'
+        }),
+        new webpack.LoaderOptionsPlugin({
+            options: {
+                postcss: [
+                    autoprefixer()
+                ]
+            }
         })
     ],
 
