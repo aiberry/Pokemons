@@ -1,40 +1,36 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export default class Moves extends React.Component {
-    constructor(props) {
-        super(props);
-        this.onInputChange = this.onInputChange.bind(this);
-    }
+const Moves = ({ filterValue, setFilter, totalMoves, movesData }) =>  {
 
-    onInputChange(event) {
+    const onInputChange = (event) => {
         event.preventDefault();
-        this.props.setFilter(event.target.value.toLowerCase());
+        setFilter(event.target.value.toLowerCase());
     }
 
-    render() {
-        return (
-            <div className="movesGridItem">
-                <h2>Moves</h2>
-                <p>Moves Total: {this.props.totalMoves}</p>
-                <input
-                    type="text"
-                    onChange={this.onInputChange}
-                    value={this.props.filterValue}
-                />
-                <ul className="singlePokemonDataContent">
-                    {this.props.movesData.map((moveItem, index) => (
-                        <li key={index}>{moveItem.move.name}</li>
-                    ))}
-                </ul>
-            </div>
-        );
-    }
+    return (
+        <div className="movesGridItem">
+            <h2>Moves</h2>
+            <p>Moves Total: {totalMoves}</p>
+            <input
+                type="text"
+                onChange={onInputChange}
+                value={filterValue}
+            />
+            <ul className="singlePokemonDataContent">
+                {movesData.map((moveItem, index) => (
+                    <li key={index}>{moveItem.move.name}</li>
+                ))}
+            </ul>
+        </div>
+    );
 }
+
+export default Moves;
 
 Moves.propTypes = {
     movesData: PropTypes.array,
     setFilter: PropTypes.func,
-    totalMoves: PropTypes.string,
+    totalMoves: PropTypes.number,
     filterValue: PropTypes.string
 };
