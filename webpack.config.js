@@ -1,58 +1,19 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const autoprefixer = require('autoprefixer');
-const webpack = require('webpack');
+path = require('path');
 
-const config = {
-    context: path.resolve('./'),
+let BUILD_DIR = path.resolve(__dirname, './dist');
+let APP_DIR = path.resolve(__dirname, './src');
 
-    entry: {
-        app: './src/index.js'
-    },
+const configDirs = {
+    BUILD_DIR: BUILD_DIR,
+    APP_DIR: APP_DIR
+}
 
-    output: {
-        path: path.resolve(__dirname, 'dist'),
-        filename: '[name].js'
-    },
-
-    module: {
-        rules: [
-            {
-                test: /\.js$/,
-                loader: ['babel-loader', 'astroturf/loader'],
-                resolve: {
-                    extensions: ['.tsx', '.ts', '.js']
-                }
-            },
-            {
-                test: /\.css|\.s[ac]ss$/i,
-                use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader']
-            }
-        ]
-    },
-    plugins: [
-        new HtmlWebpackPlugin({
-            title: 'Pockemon App',
-            template: './src/index.html',
-            inject: 'body',
-            filename: 'index.html'
-        }),
-        new webpack.LoaderOptionsPlugin({
-            options: {
-                postcss: [
-                    autoprefixer()
-                ]
-            }
-        })
-    ],
-
-    devServer: {
-        historyApiFallback: true,
-        contentBase: path.resolve('./dist'),
-        port: 9000,
-        clientLogLevel: 'silent',
-        open: true
+function buildConfig(env) {
+    if (env === 'dev' || env ==='prod') {
+        return require('./config/' + env + '.js')(configDirs);
+    } else {
+        console.log("Wrong webpack build parameter. Possible choices: 'dev' or 'prod'.")
     }
-};
+}
 
-module.exports = config;
+module.exports = buildConfig;

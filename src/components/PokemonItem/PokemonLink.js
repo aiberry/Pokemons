@@ -6,10 +6,6 @@ const PokemonLink = ({ filterName }) => (
     <NavLink
         exact
         to={'pokemon/' + filterName}
-        activeStyle={{
-            textDecoration: 'none',
-            color: 'black'
-        }}
     >
         {filterName}
     </NavLink>
