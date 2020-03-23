@@ -9,6 +9,7 @@ import { getPokemons } from '../actions/getPokemons';
 import { setQuery } from '../actions/setQuery';
 import PropTypes from 'prop-types';
 import { useHistory } from 'react-router-dom';
+import Footer from './Footer';
 
 const App = ({
     pokemonList,
@@ -40,7 +41,7 @@ const App = ({
     };
 
     return (
-        <div>
+        <div className="contentWrap">
             <h1>Pockemon Search</h1>
             <NameSearchForm
                 handleSubmit={onSearchHandler}
@@ -54,6 +55,7 @@ const App = ({
             </ul>
             {previousQuery ? <ButtonPrevious onPreviousClick={openPrevious} /> : ''}
             {nextQuery ? <ButtonNext onNextClick={openNext} /> : ''}
+            <Footer />
         </div>
     );
 };
