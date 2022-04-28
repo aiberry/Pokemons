@@ -4,7 +4,7 @@
     "description": "pokeAPI prj",
     "main": "index.js",
     "dependencies": {
-        "cross-fetch": "^3.0.4",
+        "cross-fetch": "^3.1.5",
         "express": "^4.17.1",
         "path": "^0.12.7",
         "prop-types": "^15.7.2",
